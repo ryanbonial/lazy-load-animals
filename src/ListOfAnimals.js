@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 
-import animalPicker from "./utils/animal-picker";
+// import animalPicker from './utils/animal-picker';
 
 function ListOfAnimals() {
   const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
-    setAnimals(animalPicker());
-  }, []);
+    import("./utils/animal-picker").then(({ default: animalPicker }) => {
+      setAnimals(animalPicker());
+    });
+  }, [])
 
   return (
     <div>
