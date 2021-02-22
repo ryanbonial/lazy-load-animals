@@ -13,7 +13,7 @@ function ListOfAnimals() {
 
   return (
     <div>
-      <h2>Here are some animals!</h2>
+      <h2>Here are some animals</h2>
       {animals.map((animal) => (
         <div key={animal}>{animal}</div>
       ))}
