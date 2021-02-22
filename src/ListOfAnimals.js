@@ -7,7 +7,7 @@ function ListOfAnimals() {
 
   useEffect(() => {
     import("./utils/animal-picker").then(({ default: animalPicker }) => {
-      setAnimals(animalPicker('turtle'));
+      setAnimals(animalPicker('fox'));
     });
   }, [])
 
