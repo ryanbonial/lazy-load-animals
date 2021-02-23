@@ -1,5 +1,5 @@
-function animalPicker(alwaysInclude = 'emu')  {
-  return [alwaysInclude, 'giraffe', 'penguin', '🐶 dog']
+function animalPicker(alwaysInclude = ['emu', 'eagle'])  {
+  return [...alwaysInclude.map(animal => `* ${animal}`), 'giraffe', 'penguin', '🐶 dog']
 }
 
 export default animalPicker;
