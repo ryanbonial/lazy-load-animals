@@ -11,7 +11,7 @@ function ListOfAnimals() {
       /* webpackPrefetch: true */
       "./utils/animal-picker"
     ).then(({ default: animalPicker }) => {
-      setAnimals(animalPicker(['turtle', 'fox']));
+      setAnimals(animalPicker('turtle'));
     });
   }, []);
 
