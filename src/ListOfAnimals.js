@@ -6,10 +6,14 @@ function ListOfAnimals() {
   const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
-    import("./utils/animal-picker").then(({ default: animalPicker }) => {
+    import(
+      /* webpackChunkName: "animal-picker" */
+      /* webpackPrefetch: true */
+      "./utils/animal-picker"
+    ).then(({ default: animalPicker }) => {
       setAnimals(animalPicker(['turtle', 'fox']));
     });
-  }, [])
+  }, []);
 
   return (
     <div>
